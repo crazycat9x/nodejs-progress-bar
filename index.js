@@ -29,7 +29,7 @@ progressBar.prototype.render = function() {
 	);
 };
 
-module.export = progressBar;
+module.exports = progressBar;
 
 // Testing script:
 
