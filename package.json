@@ -1,0 +1,11 @@
+{
+  "name": "nodejs-progress-bar",
+  "version": "1.0.0",
+  "description": "terminal progress bar for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tien Nguyen Khac",
+  "license": "ISC"
+}
