@@ -16,6 +16,7 @@ progressBar.prototype.update = function(current) {
 };
 
 progressBar.prototype.render = function() {
+	if (this.current > this.total) { throw "current value exceed total" };
 	let percentageProgress = parseFloat((this.current / this.total).toFixed(2));
 	isNaN(percentageProgress) && (percentageProgress = 0);
 	let filledBarLength = Math.floor(percentageProgress * this.barLength);
@@ -34,15 +35,15 @@ module.exports = progressBar;
 
 // Testing script:
 
-// let progress = new progressBar(5, "=");
-// for (var i = 0; i < 6; i++) {
-// 	(function(i) {
-// 		setTimeout(function() {
-// 			if (i == 5) {
-// 				console.log("hey there");
-// 			} else {
-// 				progress.update();
-// 			}
-// 		}, 1000 * i);
-// 	})(i);
-// }
+let progress = new progressBar(5, "=");
+for (var i = 0; i < 6; i++) {
+	(function(i) {
+		setTimeout(function() {
+			if (i == 6) {
+				console.log("hey there");
+			} else {
+				progress.update();
+			}
+		}, 1000 * i);
+	})(i);
+}
