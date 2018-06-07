@@ -27,6 +27,7 @@ progressBar.prototype.render = function() {
 		`Current progress: [${filledBar}${emptyBar}] | ${percentageProgress *
 			100}%`
 	);
+	percentageProgress == 1 && console.log();
 };
 
 module.exports = progressBar;
@@ -34,10 +35,14 @@ module.exports = progressBar;
 // Testing script:
 
 // let progress = new progressBar(5, "=");
-// for (var i = 0; i < 5; i++) {
-//     (function (i) {
-//       setTimeout(function () {
-//         progress.update();
-//       }, 1000*i);
-//     })(i);
-//   };
+// for (var i = 0; i < 6; i++) {
+// 	(function(i) {
+// 		setTimeout(function() {
+// 			if (i == 5) {
+// 				console.log("hey there");
+// 			} else {
+// 				progress.update();
+// 			}
+// 		}, 1000 * i);
+// 	})(i);
+// }
