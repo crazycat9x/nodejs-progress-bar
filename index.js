@@ -35,15 +35,15 @@ module.exports = progressBar;
 
 // Testing script:
 
-let progress = new progressBar(5, "=");
-for (var i = 0; i < 6; i++) {
-	(function(i) {
-		setTimeout(function() {
-			if (i == 6) {
-				console.log("hey there");
-			} else {
-				progress.update();
-			}
-		}, 1000 * i);
-	})(i);
-}
+// let progress = new progressBar(5, "=");
+// for (var i = 0; i < 6; i++) {
+// 	(function(i) {
+// 		setTimeout(function() {
+// 			if (i == 6) {
+// 				console.log("hey there");
+// 			} else {
+// 				progress.update();
+// 			}
+// 		}, 1000 * i);
+// 	})(i);
+// }
