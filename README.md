@@ -5,7 +5,8 @@ A light weight customizable progress bar for node.js
 progressBar = require(PATH_TO_MODULE);
 
 let totalProcess = 6;
-let progress = new progressBar(5, "="); // progressBar(total: Int, barCharacter: Str)
+let barCharacter = "="
+let progress = new progressBar(totalProcess, barCharacter); // progressBar(total: 6, barCharacter: "=")
 
 for (var i = 0; i < totalProcess; i++) {
   twoHoursLater();   // process that took some time
