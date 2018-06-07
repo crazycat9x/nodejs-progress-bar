@@ -1,4 +1,4 @@
-function ProgressBar(total, percentChar) {
+function progressBar(total, percentChar) {
 	this.total = total;
 	this.current = 0;
 	this.percentChar = percentChar;
@@ -6,16 +6,16 @@ function ProgressBar(total, percentChar) {
 	this.render();
 }
 
-ProgressBar.prototype.setTotal = function(total) {
+progressBar.prototype.setTotal = function(total) {
 	this.total = total;
 };
 
-ProgressBar.prototype.update = function(current) {
+progressBar.prototype.update = function(current) {
 	this.current++;
 	this.render();
 };
 
-ProgressBar.prototype.render = function() {
+progressBar.prototype.render = function() {
 	let percentageProgress = parseFloat((this.current / this.total).toFixed(2));
 	isNaN(percentageProgress) && (percentageProgress = 0);
 	let filledBarLength = Math.floor(percentageProgress * this.barLength);
@@ -29,11 +29,11 @@ ProgressBar.prototype.render = function() {
 	);
 };
 
-module.export = ProgressBar;
+module.export = progressBar;
 
 // Testing script:
 
-// let progress = new ProgressBar(5, "=");
+// let progress = new progressBar(5, "=");
 // for (var i = 0; i < 5; i++) {
 //     (function (i) {
 //       setTimeout(function () {
